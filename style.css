@@ -1,0 +1,150 @@
+/* --- Root Variables & Reset --- */
+:root {
+    --primary: #2563eb;
+    --secondary: #080808;
+    --accent: #3b82f6;
+    --bg-light: #f1f5f9;
+    --white: #ffffff;
+    --text-dark: #334155;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Navigasi --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    background: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(67, 133, 160, 0.8), rgba(232, 235, 238, 0.8));          
+    
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(14, 13, 13);
+}
+
+.hero-content h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+/* --- Global Section & Card --- */
+section {
+    padding: 100px 8% 60px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+/* --- Grid Systems --- */
+.project-grid, .media-container, .info-grid, .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* --- Tabel (Syarat E: Informasi) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th { background: var(--primary); color: white; }
+
+/* --- Form (Syarat F: Kontak) --- */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.social-links {
+    font-size: 1rem;
+    margin-top: 20px;
+    display: block;
+    gap: 15px;
+}
+
+.social-links a { color: var(--secondary); }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--secondary);
+    color: white;
+}
