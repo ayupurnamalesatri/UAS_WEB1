@@ -1,150 +1,153 @@
-/* --- Root Variables & Reset --- */
-:root {
-    --primary: #2563eb;
-    --secondary: #080808;
-    --accent: #3b82f6;
-    --bg-light: #f1f5f9;
-    --white: #ffffff;
-    --text-dark: #334155;
-    --shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    /* --- Root & General --- */
+    :root {
+        --primary-color: #0dcaf0; /* Info Blue */
+        --dark-color: #212529;
+        --light-bg: #f8f9fa;
+        --transition: all 0.3s ease-in-out;
+    }
 
-html {
-    scroll-behavior: smooth;
-}
+    body { 
+        scroll-behavior: smooth; 
+        background-color: var(--light-bg);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #444;
+    }
 
-body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
+    section { padding: 100px 0; }
 
-/* --- Navigasi --- */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 8%;
-    background: var(--white);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: var(--shadow);
-}
+    /* --- Navbar Styling --- */
+    .navbar {
+        transition: var(--transition);
+        padding: 15px 0;
+    }
+    .navbar.scrolled {
+        padding: 10px 0;
+        background-color: rgba(33, 37, 41, 0.95) !important;
+        backdrop-filter: blur(10px);
+    }
+    .nav-link {
+        font-weight: 500;
+        transition: var(--transition);
+    }
+    .nav-link:hover {
+        color: var(--primary-color) !important;
+    }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: black;
-}
+    /* --- Hero Section --- */
+    .hero-section {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    .hero-section h1 {
+        animation: fadeInLeft 1s ease;
+    }
+    .hero-section img {
+        animation: fadeInRight 1.5s ease;
+        transition: transform 0.5s ease;
+    }
+    .hero-section img:hover {
+        transform: scale(1.03);
+    }
 
-.logo span {
-    color: var(--primary);
-}
+    /* --- Section Titles --- */
+    .section-title { 
+        margin-bottom: 50px; 
+        font-weight: 800; 
+        text-align: center; 
+        color: var(--dark-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+    }
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: var(--primary-color);
+        margin: 15px auto 0;
+        border-radius: 2px;
+    }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+    /* --- Card & Hover Effects --- */
+    .card { 
+        border: none; 
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transition: var(--transition); 
+        overflow: hidden;
+    }
+    .card:hover { 
+        transform: translateY(-10px); 
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
 
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: 0.3s;
-}
+    /* --- Media Gallery --- */
+    .hover-zoom {
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+    .hover-zoom:hover {
+        transform: scale(1.1);
+    }
+    video, audio {
+        border-radius: 10px;
+        background: #f1f1f1;
+    }
 
-nav ul li a:hover {
-    color: var(--primary);
-}
+    /* --- Timeline Styling --- */
+    .border-start.border-warning {
+        border-width: 3px !important;
+        margin-left: 20px;
+    }
+    .timeline-dot {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #ffc107;
+        border-radius: 50%;
+        left: -41px;
+        top: 5px;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+    }
 
-/* --- Hero Section --- */
-.hero-section {
-    height: 100vh;
-    background: linear-gradient(rgba(67, 133, 160, 0.8), rgba(232, 235, 238, 0.8));          
-    
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: rgb(14, 13, 13);
-}
+    /* --- Form & Contact --- */
+    .form-control {
+        padding: 12px;
+        border-radius: 8px;
+    }
+    .form-control:focus {
+        box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25);
+        border-color: var(--primary-color);
+    }
+    iframe {
+        filter: grayscale(100%);
+        transition: 0.5s;
+    }
+    iframe:hover {
+        filter: grayscale(0%);
+    }
 
-.hero-content h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    /* --- Animations --- */
+    @keyframes fadeInLeft {
+        from { opacity: 0; transform: translateX(-50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInRight {
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
 
-/* --- Global Section & Card --- */
-section {
-    padding: 100px 8% 60px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    color: var(--secondary);
-}
-
-.card {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    margin-bottom: 20px;
-}
-
-/* --- Grid Systems --- */
-.project-grid, .media-container, .info-grid, .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-/* --- Tabel (Syarat E: Informasi) --- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-
-table th { background: var(--primary); color: white; }
-
-/* --- Form (Syarat F: Kontak) --- */
-form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-}
-
-.social-links {
-    font-size: 1rem;
-    margin-top: 20px;
-    display: block;
-    gap: 15px;
-}
-
-.social-links a { color: var(--secondary); }
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--secondary);
-    color: white;
-}
+    /* --- Responsive Fixes --- */
+    @media (max-width: 768px) {
+        section { padding: 60px 0; }
+        .display-3 { font-size: 2.5rem; }
+        .hero-section img {
+            width: 250px !important;
+            height: 250px !important;
+            margin-top: 20px;
+        }
+    }

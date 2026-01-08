@@ -3,218 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UAS Pemrograman Web 1 - Portofolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>UAS Pemrograman Web 1 - Portofolio Ayu</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        body { scroll-behavior: smooth; background-color: #f8f9fa; }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1600x900/?technology');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+        .section-title { margin-bottom: 40px; font-weight: bold; text-align: center; color: #333; }
+        .card { transition: 0.3s; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .card:hover { transform: translateY(-5px); }
+        section { padding: 80px 0; }
+    </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Porto<span>folio.</span></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#karya">Karya</a></li>
-            <li><a href="#media">Media</a></li>
-            <li><a href="#informasi">Informasi</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Porto<span class="text-info">folio.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#karya">Karya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#informasi">Informasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <section id="home" class="hero-section">
-        <div>
-            <h1>Hallo, Saya Ayu Purnama Lestari</h1>
-            <p>Mahasiswa Sistem Informasi Universitas Pamulang</p>
-            
+   <header id="home" class="hero-section d-flex align-items-center" style="min-height: 100vh; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #333;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-lg-start text-center">
+                    <h5 class="text-info fw-bold mb-3">Selamat Datang di Portofolio Saya</h5>
+                    <h1 class="display-3 fw-bold mb-3">Ayu Purnama Lestari</h1>
+                    <p class="lead mb-4">Mahasiswa Sistem Informasi Universitas Pamulang yang berdedikasi dalam pengembangan teknologi web dan manajemen data.</p>
+                    <div class="d-flex gap-3 justify-content-lg-start justify-content-center">
+                        <a href="#profile" class="btn btn-info btn-lg text-white rounded-pill px-4 shadow">Tentang Saya</a>
+                        <a href="#kontak" class="btn btn-outline-dark btn-lg rounded-pill px-4">Kontak</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                    <div class="position-relative d-inline-block">
+                        <img src="WhatsApp Image 2026-01-08 at 14.34.31.jpeg" alt="Ayu Purnama Lestari" 
+                             class="rounded-circle shadow-lg border border-5 border-white img-fluid" 
+                             style="width: 350px; height: 350px; object-fit: cover;">
+                        
+                        <div class="position-absolute top-0 start-0 translate-middle bg-info rounded-circle" style="width: 50px; height: 50px; z-index: -1;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </header>
 
     <section id="profile">
-        <h2 class="section-title">Profile</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Data Diri</h3>
-                <p><strong>Nama:</strong> Ayu Purnama Lestari</p>
-                <p><strong>NIM:</strong> 251011700967</p>
-                <p><strong>Kelas:</strong> 01SIFP017</p>
-            
-                <br><h3>Keahlian</h3>
-                <ul>
-                    <li>menggunakan Microsoft Word</li>
-                    <li>menggunakan Excel</li>
-                </ul>
-
-                <br><h3>Pengalaman Kerja</h3>
-                <p> CREW Pt. Alfaria trijaya, Tbk. (2024-2025)</p>
-                <ul>
-                    <li>Melayani Pelanggan dengan ramah dan cepat</li>
-                    <li>Mengoperasikan mesin kasir dan sistem pembayaran</li>
-                    <li>Mengelola stok barang dan display produk</li>
-                    <li>Menjaga kebersihan dan kerapihan area toko</li>
-                </ul>
-        
-                <br><h3> Pendidikan</h3>
-                <ul>
-                  <li>SDN Tamansari 05 (2011-2017)</li>
-                  <li>Mts Raudhatussa'adah (2017-2020)</li>
-                  <li>SMAN 1 Rumpin (2020-2023)</li>
-                  <li>Universitas Pamulang (2025-Sekarang)</li>
-                </ul>
-              
-            </div>
-        </div>
-    </section>
-
-    <section id="karya">
-        <h2 class="section-title">Karya & Project</h2>
-        <div class="project-grid">
-            <div class="card">
-                <img src="Screenshot 2026-01-06 231220.png"  width="100%" height="300">
-                <h3>Website Dialog Box</h3>
-                <p>Website Dialog Box menggunakan HTML, dan CSS.</p>
-            </div>
-            <div class="card">
-                <img src="Screenshot 2026-01-06 231317.png"  width="100%" height="300">
-                <h3>Sistem Akademik</h3>
-                <p>Aplikasi web untuk menghitung Nilai Mahasiswa.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="media">
-        <h2 class="section-title">Media</h2>
-        <div class="media-container">
-            <div class="card">
-                <h3>Video Player</h3>
-                <video controls width="100%">
-                    <source src="WhatsApp Video 2026-01-06 at 17.10.02.mp4" type="video/mp4">
-                    Browser tidak mendukung video.
-                </video>
-            
-                <h3>Audio Player</h3>
-                <audio controls style="width: 100%; margin-top: 15px;">
-                    <source src="audio.ogg" type="audio/mpeg">
-                </audio>
-            </div>
-
-            <div class="card">
-                <h3>Dokumen & Gambar</h3>
-                <div class="media-gallery">
-                    <img src="WhatsApp Image 2026-01-05 at 14.40.03.jpeg" width="70%" height="200">
-                    <img src="WhatsApp Image 2026-01-05 at 14.40.04.jpeg" width="70%" height="200">
-                </div>          
-                
-                <br>
-                <a href="CV_AyuPurnama.pdf" target="blank" class="btn-outline">Buka Dokumen PDF</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="informasi">
-        <h2 class="section-title">Informasi</h2>
-        <div class="info-grid">
-            <div class="card">
-                <h3>Layanan & Harga</h3>
-                        <ul>
-                            <li>Paket Landing Page Rp 1.000.000</li>
-                            <li>Paket Web Portofolio Rp 500.000</li>
-                        </ul>        
-            </div>
-
-            <div class="card">
-                <h3>Statistik</h3>
-                <ul>
-                    <li>15 Proyek Selesai</li>
-                    <li>10 Klien Puas</li>
-                    <li>98% Tingkat Kepuasan</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Timeline Perkembangan</h3>
-                <ul>
-                    <li>2023: Belajar HTML & CSS</li>
-                    <li>2024: Belajar JavaScript & React</li>
-                    <li>2025: Ujian Akhir Semester</li>
-                </ul>
-            </div>
-
-            <div class="card info-card">
-            <h3>Pertanyaan Umum</h3>
-            <div>
-                <details>
-                    <summary>Teknologi apa yang Anda gunakan?</summary>
-                    <p>Saya fokus pada HTML, CSS, dan JavaScript dasar.</p>
-                </details>
-                <details>
-                    <summary>Apakah website yang Anda buat responsif?</summary>
-                    <p>Ya, semua website dirancang agar tampil optimal di perangkat mobile maupun desktop.</p>
-                </details>
-                <details>
-                    <summary>Berapa lama waktu pengerjaan proyek?</summary>
-                    <p>Tergantung kerumitan, biasanya berkisar antara 7 hingga 14 hari kerja.</p>
-                </details>
-            </div>
-        </div>
-
-        </div>
-    </section>
-
-    <section id="kontak">
-        <h2 class="section-title">Kontak</h2>
-        <div class="contact-grid">
-            <div class="card">
-                <h3>Informasi Kontak</h3>
-                <br>
-                    <p><strong>Email:</strong> ayupl8579@gmail.com</p>
-                    <p><strong>No. Telp:</strong> 0852-1362-3313</p>
-                    <p><strong>Alamat:</strong> Kp. Parakanomas rt03/rw01</p>
-                    <p><strong>Jam Kerja:</strong> Senin - Jumat, 09.00 - 17.00 WIB</p>
-            </div>
-            
-            <div class="card">
-                <h3>Kirim Pesan</h3>
-                <form id="contactForm">
-                    <input type="text" placeholder="Nama Lengkap" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="text" placeholder="Subjek">
-                    <textarea placeholder="Pesan Anda" rows="4"></textarea>
-                    <button type="submit">Kirim</button>
-                </form>
-            </div>
-
-            <div class="card">
-                <h3>Lokasi</h3>
-                <div class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3184288015386!2d106.68944521476985!3d-6.353389995402435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e5a603957813%3A0x280e81c015948332!2sUniversitas%20Pamulang%20Kampus%20Viktor!5e0!3m2!1sid!2sid!4v1641111111111!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="container">
+            <h2 class="section-title">Profile</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 p-4">
+                        <h3 class="h4 text-info"><i class="bi bi-person-fill"></i> Data Diri</h3>
+                        <p><strong>Nama:</strong> Ayu Purnama Lestari<br>
+                           <strong>NIM:</strong> 251011700967<br>
+                           <strong>Kelas:</strong> 01SIFP017</p>
+                        
+                        <h3 class="h4 text-info mt-4"><i class="bi bi-star-fill"></i> Keahlian</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Microsoft Word</li>
+                            <li class="list-group-item">Microsoft Excel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-4">
+                        <h3 class="h4 text-info"><i class="bi bi-briefcase-fill"></i> Pengalaman Kerja</h3>
+                        <p class="fw-bold mb-1">CREW Pt. Alfaria trijaya, Tbk. (2024-2025)</p>
+                        <ul class="small">
+                            <li>Melayani Pelanggan dengan ramah</li>
+                            <li>Mengoperasikan mesin kasir</li>
+                        </ul>
+                        
+                        <h3 class="h4 text-info mt-3"><i class="bi bi-mortarboard-fill"></i> Pendidikan</h3>
+                        <ul class="small">
+                            <li>SMAN 1 Rumpin (2020-2023)</li>
+                            <li>Universitas Pamulang (2025-Sekarang)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <h3>Media Sosial</h3>
-                <div class="social-links">
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a><br>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a><br>
-                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
-                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a><br>
+    <section id="karya" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Karya & Project</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card overflow-hidden">
+                        <img src="Screenshot 2026-01-06 231220.png" class="card-img-top" style="height:250px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Website Dialog Box</h5>
+                            <p class="card-text text-muted">Dibuat menggunakan HTML & CSS.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card">
-                <h3>Pertanyaan Umum (FAQ)</h3>
-                <details>
-                    <summary>Bagaimana cara memesan layanan?</summary>
-                    <p>Anda dapat menghubungi kami melalui form pesan di samping atau melalui email resmi.</p>
-                </details>
-                <details>
-                    <summary>Berapa lama proses pengerjaan?</summary>
-                    <p>Tergantung kompleksitas, biasanya berkisar antara 1-4 minggu.</p>
-                </details>
+                <div class="col-md-6">
+                    <div class="card overflow-hidden">
+                        <img src="Screenshot 2026-01-06 231317.png" class="card-img-top" style="height:250px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sistem Akademik</h5>
+                            <p class="card-text text-muted">Aplikasi penghitung nilai mahasiswa.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-   
+    <section id="media" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Media & Galeri</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold">
+                            <i class="bi bi-play-circle-fill me-2"></i>Video Player
+                        </div>
+                        <div class="card-body">
+                            <video controls class="w-100 rounded shadow-sm">
+                                <source src="WhatsApp Video 2026-01-06 at 17.10.02.mp4" type="video/mp4">
+                                Browser tidak mendukung video.
+                            </video>
+                            <p class="mt-3 small text-muted">Cuplikan video presentasi atau kegiatan akademik.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="script.js"></script>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold">
+                            <i class="bi bi-mic-fill me-2"></i>Audio Player
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <p class="small text-muted mb-2">Dengarkan rekaman suara/podcast:</p>
+                            <audio controls class="w-100 mb-3">
+                                <source src="audio.ogg" type="audio/mpeg">
+                                Browser tidak mendukung audio.
+                            </audio>
+                            <div class="bg-light p-3 rounded text-center">
+                                <i class="bi bi-music-note-beamed fs-1 text-success"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold">
+                            <i class="bi bi-file-earmark-pdf-fill me-2"></i>Dokumen PDF
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-center">
+                            <i class="bi bi-file-pdf display-1 text-danger mb-3"></i>
+                            <h5>Curriculum Vitae</h5>
+                            <p class="small text-muted">Unduh CV terbaru saya dalam format PDF.</p>
+                            <a href="CV_AyuPurnama.pdf" target="blank" class="btn btn-outline-danger rounded-pill mt-auto">
+                                <i class="bi bi-download me-2"></i>Buka Dokumen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header bg-info text-white fw-bold">
+                            <i class="bi bi-images me-2"></i>Galeri Gambar
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-6 col-md-3">
+                                    <img src="sentul.bogor.jpeg" class="img-fluid rounded shadow-sm hover-zoom" style="height: 300px; width: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="black.jpeg" class="img-fluid rounded shadow-sm hover-zoom" style="height: 300px; width: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="kebun raya bogor.jpeg" class="img-fluid rounded shadow-sm hover-zoom"  style="height: 300px; width: 100%; object-fit: cover;">
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="pantai.jpeg" clas="img-fluid rounded shadow-sm hover-zoom" style="height: 300px; width: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="informasi" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Informasi & Detail</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-4 text-primary"><i class="bi bi-bag-check-fill me-2"></i>Layanan & Estimasi</h4>
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent">
+                                    <span>Paket Landing Page</span>
+                                    <span class="badge bg-primary rounded-pill">Rp 1.000.000</span>
+                                </div>
+                                <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent">
+                                    <span>Paket Web Portofolio</span>
+                                    <span class="badge bg-primary rounded-pill">Rp 500.000</span>
+                                </div>
+                                <div class="list-group-item d-flex justify-content-between align-items-center bg-transparent">
+                                    <span>Custom Web Apps</span>
+                                    <span class="text-muted small">Mulai Rp 2.000.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm bg-primary text-white text-center">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <div class="row w-100">
+                                <div class="col-4">
+                                    <h2 class="fw-bold mb-0">15+</h2>
+                                    <small>Proyek</small>
+                                </div>
+                                <div class="col-4">
+                                    <h2 class="fw-bold mb-0">10+</h2>
+                                    <small>Klien</small>
+                                </div>
+                                <div class="col-4">
+                                    <h2 class="fw-bold mb-0">98%</h2>
+                                    <small>Puas</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <h4 class="fw-bold mb-4 text-warning"><i class="bi bi-hourglass-split me-2"></i>Timeline Belajar</h4>
+                        <div class="position-relative ps-4 border-start border-2 border-warning">
+                            <div class="mb-4 position-relative">
+                                <div class="position-absolute translate-middle-x start-0 bg-warning rounded-circle" style="width:12px; height:12px; left:-31px !important; top:8px;"></div>
+                                <h6 class="fw-bold mb-1">2023 - Awal Mula</h6>
+                                <p class="small text-muted">Mulai mempelajari struktur dasar HTML dan pewarnaan CSS.</p>
+                            </div>
+                            <div class="mb-4 position-relative">
+                                <div class="position-absolute translate-middle-x start-0 bg-warning rounded-circle" style="width:12px; height:12px; left:-31px !important; top:8px;"></div>
+                                <h6 class="fw-bold mb-1">2024 - JavaScript & Logika</h6>
+                                <p class="small text-muted">Mendalami pemrograman sisi klien dan manipulasi dokumen.</p>
+                            </div>
+                            <div class="position-relative">
+                                <div class="position-absolute translate-middle-x start-0 bg-warning rounded-circle" style="width:12px; height:12px; left:-31px !important; top:8px;"></div>
+                                <h6 class="fw-bold mb-1">2025 - Pengembangan Web 1</h6>
+                                <p class="small text-muted">Fokus pada Framework Bootstrap dan proyek akhir semester (UAS).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <h4 class="fw-bold mb-4 text-success"><i class="bi bi-chat-left-dots-fill me-2"></i>Pertanyaan Umum</h4>
+                        <div class="accordion accordion-flush" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                        Teknologi apa yang Anda gunakan?
+                                    </button>
+                                </h2>
+                                <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body small text-muted">
+                                        Saya fokus pada HTML5, CSS3, JavaScript, dan Framework Bootstrap untuk membuat tampilan yang responsif.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                                        Apakah website mobile friendly?
+                                    </button>
+                                </h2>
+                                <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body small text-muted">
+                                        Ya, setiap proyek dirancang agar tampil optimal di semua ukuran layar, mulai dari HP hingga monitor besar.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+             </div>
+         </section>
+
+   <section id="kontak" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Hubungi Kami</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 bg-dark text-white">
+                        <h4 class="fw-bold mb-4 text-info">Info Kontak</h4>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-envelope-at fs-4 text-info me-3"></i>
+                                <span>ayupl8579@gmail.com</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-whatsapp fs-4 text-info me-3"></i>
+                                <span>0852-1362-3313</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-geo-alt fs-4 text-info me-3"></i>
+                                <span>Kp. Parakanomas rt03/rw01, Bogor</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-clock fs-4 text-info me-3"></i>
+                                <span>Senin - Jumat, 09.00 - 17.00 WIB</span>
+                            </div>
+                        </div>
+
+                        <h4 class="fw-bold mb-3 text-info">Media Sosial</h4>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="https://linkedin.com" class="btn btn-outline-info btn-sm rounded-pill"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                            <a href="https://instagram.com" class="btn btn-outline-info btn-sm rounded-pill"><i class="bi bi-instagram"></i> Instagram</a>
+                            <a href="https://twitter.com" class="btn btn-outline-info btn-sm rounded-pill"><i class="bi bi-Twitter"></i> Twitter</a>
+                            <a href="https://github.com"  class="btn btn-outline-info btn-sm rounded-pill"><i class="bi bi-github"></i> GitHub</a>
+                            <a href="https://facebook.com"  class="btn btn-outline-info btn-sm rounded-pill"><i class="bi bi-facebook"></i> Facebook</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <h4 class="fw-bold mb-4 text-primary">Kirim Pesan</h4>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Nama Lengkap</label>
+                                <input type="text" class="form-control form-control-sm border-0 bg-light" placeholder="Masukkan nama..." required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Email</label>
+                                <input type="email" class="form-control form-control-sm border-0 bg-light" placeholder="Email Anda..." required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Pesan</label>
+                                <textarea class="form-control form-control-sm border-0 bg-light" rows="4" placeholder="Tulis pesan..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 rounded-pill fw-bold py-2 shadow-sm">
+                                Kirim Sekarang <i class="bi bi-send ms-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="row g-4 h-100">
+                        <div class="col-12 h-50">
+                            <div class="card border-0 shadow-sm overflow-hidden h-100">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126881.53177688224!2d106.63464198906251!3d-6.387817000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e4f07a0f6713%3A0x633e731b6d080b06!2sRumpin%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1704500000000!5m2!1sen!2sid" 
+                                    width="100%" height="100%" style="border:0; min-height: 200px;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-12 h-50">
+                            <div class="card border-0 shadow-sm p-3 h-100">
+                                <h5 class="fw-bold mb-3 text-danger small"><i class="bi bi-question-circle me-2"></i>FAQ Singkat</h5>
+                                <div class="accordion accordion-flush" id="faqContact">
+                                    <div class="accordion-item small">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed py-2 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#fc1">
+                                                Cara pesan layanan?
+                                            </button>
+                                        </h2>
+                                        <div id="fc1" class="accordion-collapse collapse" data-bs-parent="#faqContact">
+                                            <div class="accordion-body px-0 text-muted">Cukup isi form atau chat via WhatsApp.</div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item small">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed py-2 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#fc2">
+                                                Lama pengerjaan?
+                                            </button>
+                                        </h2>
+                                        <div id="fc2" class="accordion-collapse collapse" data-bs-parent="#faqContact">
+                                            <div class="accordion-body px-0 text-muted">Biasanya berkisar antara 1-4 minggu.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">&copy; 2026 Ayu Purnama Lestari. UAS Pemrograman Web 1.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
